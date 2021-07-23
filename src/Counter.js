@@ -4,7 +4,8 @@ const Counter = ({ setValue, value }) => {
       <button
         type="text"
         onClick={() => {
-          setValue(value[0] - 1);
+          const newValue = [...value[0]];
+          setValue(newValue - 1);
         }}
       >
         -
@@ -13,7 +14,8 @@ const Counter = ({ setValue, value }) => {
       <button
         type="text"
         onClick={() => {
-          setValue(value[0] + 1);
+          const newValue = [...value[0]];
+          setValue(newValue + 1);
         }}
       >
         +
