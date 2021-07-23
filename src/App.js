@@ -1,9 +1,11 @@
 import "./App.css";
-
+import { useState } from "react";
+import Counter from "./Counter";
 function App() {
+  const [value, setValue] = useState([0, 1]);
   return (
     <div>
-      Hello from <a href="https://www.lereacteur.io">Le Reacteur !</a>
+      <Counter value={value} setValue={setValue} />
     </div>
   );
 }
