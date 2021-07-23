@@ -1,23 +1,23 @@
-const Counter = ({ setValue, value }) => {
+const Counter = ({ value, setCounters, counters, index }) => {
   return (
     <div>
       <button
         type="text"
         onClick={() => {
-          const newValue = [...value];
-          newValue[0] = newValue[0] - 1;
-          setValue(newValue);
+          const tab = [...counters];
+          tab[index] = value - 1;
+          setCounters(tab);
         }}
       >
         -
       </button>
-      {value[0]}
+      {counters[index]}
       <button
         type="text"
         onClick={() => {
-          const newValue = [...value];
-          newValue[0] = newValue[0] + 1;
-          setValue(newValue);
+          const tab = [...counters];
+          tab[index] = value + 1;
+          setCounters(tab);
         }}
       >
         +
